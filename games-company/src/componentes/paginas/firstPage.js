@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { Container,Col,Row } from 'reactstrap';
+import { Container } from 'reactstrap';
 
 class FirstPage extends Component {
     state={};
