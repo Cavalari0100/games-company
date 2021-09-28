@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-
+import MainNavBar from './componentes/MainMenu/MainNavBar';
+import { Container } from 'reactstrap';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import FirstPage from './componentes/paginas/firstPage';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainNavBar/>
+      <Router>
+        <Container>
+          <Switch>
+            <Route exact path='/' component={FirstPage}/>
+          </Switch>
+        </Container>
+      </Router>
     </div>
   );
 }
